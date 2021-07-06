@@ -1,5 +1,10 @@
 .section-no-padding {
-    padding: 0px 0 94px 0;
+   @media screen and (max-width:1199px) {
+      display: none;
+   }
+   @media screen and (min-width:1200px) {
+      padding: 0px 0 94px 0;
+   } 
  }
 .business {
     flex-direction: column;
@@ -12,7 +17,6 @@
         margin-right: 0;
     }
  }
-
  .business__item {
     margin-right: var(--basic-card-gap);
     margin-top: 0;
