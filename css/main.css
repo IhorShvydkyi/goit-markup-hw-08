@@ -834,8 +834,23 @@ a.active {
 }
 
 .team-members__list {
-  display: flex;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-members__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-members__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .team-members__list h3 {
@@ -856,14 +871,29 @@ a.active {
 }
 
 .team-members__item {
+  width: 100%;
+  margin-bottom: 30px;
   background-color: var(--main-color);
   border-radius: 0px 0px 3px 3px;
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15);
-  margin-right: var(--basic-card-gap);
 }
 
 .team-members__item:last-child {
   margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .team-members__item {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-members__item {
+    flex-basis: calc((100% - 120px) / 4);
+    margin-left: 30px;
+  }
 }
 
 .card-description {
