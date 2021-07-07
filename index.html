@@ -17,47 +17,49 @@
    </head>
    <body>
       
-      <!-- <header class="header-part"> -->
-
-          <!-- Logo and Navigation -->
-          <!-- <div class="container header-line">
-            <a class="logo" href=""
-               ><span class="blue-logo-part">Web</span>Studio</a>
-               <nav class="navigation">
-               <ul class="navigation__list">
-                  <li class="navigation__item">
-                     <a href="" class="navigation__link active" >Студия</a>
-                  </li>
-                  <li class="navigation__item">
-                     <a href="./portfolio.html" class="navigation__link">Портфолио</a>
-                  </li>
-                  <li class="navigation__item">
-                     <a href="#contacts" class="navigation__link">Контакты</a>
-                  </li>
+      <header class="head">
+         <div class="container header">
+           <nav class="main-nav">
+             <a href="" class="logo logo-main">Web <span class="item">Studio</span></a>
+             <button type="button" class="menu-burger" data-menu-button>
+               <svg width="40" height="40">
+                 <use class="icon-cross" href="./images/icons/sprite.svg#close-menu"></use>
+                 <use class="icon-menu" href="./images/icons/sprite.svg#open-menu"></use>
+               </svg>
+             </button>
+             <div class="menu-container" id="menu-container" data-menu>
+               <ul class="site-nav">
+                 <li class="item">
+                   <a href="" class="link current">Студия</a>
+                 </li>
+                 <li class="item">
+                   <a href="./portfolio.html" class="link">Портфолио</a>
+                 </li>
+                 <li class="item">
+                   <a href="" class="link">Контакты</a>
+                 </li>
                </ul>
-               </nav> -->
-
-            <!-- Contacts -->
-            <!-- <ul class="contacts">
-               <li class="contacts__item">
-                  <a class="contacts__link" href="mailto:info@devstudio.com">
-                     <svg class="contacts__icon" width="16" height="12">
+               <ul class="contacts-header">
+                 <li class="item">
+                   <a href="mailto:info@devstudio.com" class="link">
+                     <svg class="mail-icon">
                         <use href="./images/icons/sprite.svg#icon-envelope">
-                        </use>
                      </svg>
-                     info@devstudio.com</a>
-               </li>
-               <li class="contacts__item" >
-                  <a class="contacts__link" href="tel:+380961111111">
-                     <svg class="contacts__icon" width="10" height="16">
+                     info@devstudio.com
+                   </a>
+                 </li>
+                 <li class="item">
+                   <a href="tel:+380991111111" class="link">
+                     <svg class="phone-icon">
                         <use href="./images/icons/sprite.svg#icon-phone">
-                        </use>
                      </svg>
                      +38 096 111 11 11</a>
-               </li>
-            </ul>
-         </div> -->
-      <!-- </header> -->
+                 </li>
+               </ul>
+             </div>
+           </nav>
+         </div>
+       </header>
 
       <main>
          <!-- Hero -->
@@ -182,12 +184,21 @@
                   <h2 class="section-title">Наша команда</h2>
                   <ul class="team-members__list" >
                      <li class="team-members__item">
-                        <img
-                           src="images/photo1.jpg"
-                           width="270"
-                           height="260"
-                           alt="teammate-ihor"
-                        />
+                        <picture>
+                           <source srcset="./images/ourteam/desktop-igor.webp 1x, ./images/ourteam/desktop-igor@2x.webp 2x"
+                             media="(min-width: 1200px)" type="image/webp">
+                           <source srcset="./images/ourteam/desktop-igor.jpg  1x, ./images/ourteam/desktop-igor@2x.jpg 2x"
+                             media="(min-width: 1200px)">
+                           <source srcset="./images/ourteam/tablet-igor.webp 1x, ./images/ourteam/tablet-igor@2x.webp 1x 2x"
+                             media="(min-width: 768px)" type="image/webp">
+                           <source srcset="./images/ourteam/tablet-igor.jpg 1x, ./images/ourteam/tablet-igor@2x.jpg 2x"
+                             media="(min-width: 768px)">
+                           <source srcset="./images/ourteam/mobile-igor.webp 1x, ./images/ourteam/mobile-igor@2x.webp  2x"
+                             media="(min-width: 320px)" type="image/webp">
+                           <source srcset="./images/ourteam/mobile-igor.jpg 1x, ./images/ourteam/mobile-igor@2x.jpg 2x"
+                             media="(min-width: 320px)">
+                           <img src="./images/ourteam/mobile-igor.jpg" alt="Игорь Демьяненко" />
+                         </picture>
                         <div class="card-description">
                               <h3>Игорь Демьяненко</h3>
                               <p>Product Designer</p>
@@ -224,12 +235,21 @@
                            </div>
                      </li>
                      <li class="team-members__item">
-                        <img
-                           src="images/photo2.jpg"
-                           width="270"
-                           height="260"
-                           alt="teammate-olha"
-                        />
+                        <picture>
+                           <source srcset="./images/ourteam/desktop-olga.webp 1x, ./images/ourteam/desktop-olga@2x.webp 2x"
+                             media="(min-width: 1200px)" type="image/webp">
+                           <source srcset="./images/ourteam/desktop-olga.jpg  1x, ./images/ourteam/desktop-olga@2x.jpg 2x"
+                             media="(min-width: 1200px)">
+                           <source srcset="./images/ourteam/tablet-olga.webp 1x, ./images/ourteam/tablet-olga@2x.webp 1x 2x"
+                             media="(min-width: 768px)" type="image/webp">
+                           <source srcset="./images/ourteam/tablet-olga.jpg 1x, ./images/ourteam/tablet-olga@2x.jpg 2x"
+                             media="(min-width: 768px)">
+                           <source srcset="./images/ourteam/mobile-olga.webp 1x, ./images/ourteam/mobile-olga@2x.webp  2x"
+                             media="(min-width: 320px)" type="image/webp">
+                           <source srcset="./images/ourteam/mobile-olga.jpg 1x, ./images/ourteam/mobile-olga@2x.jpg 2x"
+                             media="(min-width: 320px)">
+                           <img src="./images/ourteam/mobile-olga.jpg" alt="Ольга Репина" />
+                         </picture>
                         <div class="card-description">
                            <h3>Ольга Репина</h3>
                            <p>Frontend Developer</p>
@@ -266,12 +286,21 @@
                         </div>
                      </li>
                      <li class="team-members__item">
-                        <img
-                           src="images/photo3.jpg"
-                           width="270"
-                           height="260"
-                           alt="teammate-nick"
-                        />
+                        <picture>
+                           <source srcset="./images/ourteam/desktop-kolya.webp 1x, ./images/ourteam/desktop-kolya@2x.webp 2x"
+                             media="(min-width: 1200px)" type="image/webp">
+                           <source srcset="./images/ourteam/desktop-kolya.jpg  1x, ./images/ourteam/desktop-kolya@2x.jpg 2x"
+                             media="(min-width: 1200px)">
+                           <source srcset="./images/ourteam/tablet-kolya.webp 1x, ./images/ourteam/tablet-kolya@2x.webp 1x 2x"
+                             media="(min-width: 768px)" type="image/webp">
+                           <source srcset="./images/ourteam/tablet-kolya.jpg 1x, ./images/ourteam/tablet-kolya@2x.jpg 2x"
+                             media="(min-width: 768px)">
+                           <source srcset="./images/ourteam/mobile-kolya.webp 1x, ./images/ourteam/mobile-kolya@2x.webp  2x"
+                             media="(min-width: 320px)" type="image/webp">
+                           <source srcset="./images/ourteam/mobile-kolya.jpg 1x, ./images/ourteam/mobile-kolya@2x.jpg 2x"
+                             media="(min-width: 320px)">
+                           <img src="./images/ourteam/mobile-kolya.jpg" alt="Николай Тарасов" />
+                         </picture>
                         <div class="card-description">
                            <h3>Николай Тарасов</h3>
                            <p>Marketing</p>
@@ -308,12 +337,21 @@
                         </div>
                      </li>
                      <li class="team-members__item">
-                        <img
-                           src="images/photo4.jpg"
-                           width="270"
-                           height="260"
-                           alt="teammate-mihail"
-                        />
+                        <picture>
+                           <source srcset="./images/ourteam/desktop-misha.webp 1x, ./images/ourteam/desktop-misha@2x.webp 2x"
+                             media="(min-width: 1200px)" type="image/webp">
+                           <source srcset="./images/ourteam/desktop-misha.jpg  1x, ./images/ourteam/desktop-misha@2x.jpg 2x"
+                             media="(min-width: 1200px)">
+                           <source srcset="./images/ourteam/tablet-misha.webp 1x, ./images/ourteam/tablet-misha@2x.webp 1x 2x"
+                             media="(min-width: 768px)" type="image/webp">
+                           <source srcset="./images/ourteam/tablet-misha.jpg 1x, ./images/ourteam/tablet-misha@2x.jpg 2x"
+                             media="(min-width: 768px)">
+                           <source srcset="./images/ourteam/mobile-misha.webp 1x, ./images/ourteam/mobile-misha@2x.webp  2x"
+                             media="(min-width: 320px)" type="image/webp">
+                           <source srcset="./images/ourteam/mobile-misha.jpg 1x, ./images/ourteam/mobile-misha@2x.jpg 2x"
+                             media="(min-width: 320px)">
+                           <img src="./images/ourteam/mobile-misha.jpg" alt="Михаил Ермаков" />
+                         </picture>
                         <div class="card-description">
                            <h3>Михаил Ермаков</h3>
                            <p>UI Designer</p>
@@ -405,12 +443,14 @@
             </div>
          </section>
       </main>
+      
 
       <footer class="footer">
          <div class="container footer__box">
             <div class="footer-contacts">
-               <a class="footer__logo" href=""
-               ><span class="blue-logo-part">Web</span>Studio</a>
+               <a href="" class="logo logo-footer">
+                  Web <span class="item">Studio</span>
+                </a>
 
             <!-- Address Section -->
             <address class="address">
@@ -552,5 +592,6 @@
        </div>
       <!-- Script -->
       <script src="./js/modal.js"></script>
+      <script src="./js/mobile-menu.js"></script>
    </body>
 </html>

@@ -1,5 +1,7 @@
 @import './vendor/normalize';
 @import './utils/vars';
+@import './utils/placeholders';
+@import './utils/mixin';
 @import './base/common.scss';
 @import './layout/header';
 @import './components/logo';
