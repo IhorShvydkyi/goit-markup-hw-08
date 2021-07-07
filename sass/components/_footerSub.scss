@@ -1,7 +1,14 @@
 .subscribe__email {
-    width: 358px;
-    height: 50px;
-    margin-right: 12px;
+    width: 100%;
+    @media screen and (min-width: 768px){
+        width: 450px;
+    }
+    @media screen and (min-width: 1200px){
+        width: 358px;
+        margin-right: 12px;
+    }
+    height: 50px;  
+    margin-bottom: 20px;
     padding: 15px 16px;
     font-size: 16px;
     line-height: 1.25;
@@ -49,10 +56,26 @@
  }
  .subscribe {
     display: flex;
-    margin-left: auto;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width:1200px) {
+        margin-left: auto;
+    }
+    &__form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
     &__field {
         display: flex;
+        @media screen and (max-width:1199px) {
+            align-items: center;
+        flex-direction: column;
+        }
+        @media screen and (min-width:1200px) {
+            align-items: baseline;
+        }
     }
     &__label {
         display: block;
