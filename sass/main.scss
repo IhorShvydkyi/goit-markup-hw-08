@@ -1,12 +1,10 @@
 @import './vendor/normalize';
 @import './utils/vars';
-@import './utils/placeholders';
-@import './utils/mixin';
 @import './base/common.scss';
 @import './layout/header';
-@import './components/logo';
+// @import './components/logo';
 @import './layout/navigation';
-@import './components/contacts';
+// @import './components/contacts';
 @import './components/hero';
 @import './components/modalWindow./backdrop';
 @import './components/modalWindow./modal';

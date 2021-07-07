@@ -18,48 +18,76 @@
    <body>
       
       <header class="head">
-         <div class="container header">
-           <nav class="main-nav">
-             <a href="" class="logo logo-main">Web <span class="item">Studio</span></a>
-             <button type="button" class="menu-burger" data-menu-button>
-               <svg width="40" height="40">
-                 <use class="icon-cross" href="./images/icons/sprite.svg#close-menu"></use>
-                 <use class="icon-menu" href="./images/icons/sprite.svg#open-menu"></use>
-               </svg>
-             </button>
-             <div class="menu-container" id="menu-container" data-menu>
-               <ul class="site-nav">
-                 <li class="item">
-                   <a href="" class="link current">Студия</a>
-                 </li>
-                 <li class="item">
-                   <a href="./portfolio.html" class="link">Портфолио</a>
-                 </li>
-                 <li class="item">
-                   <a href="" class="link">Контакты</a>
-                 </li>
-               </ul>
-               <ul class="contacts-header">
-                 <li class="item">
-                   <a href="mailto:info@devstudio.com" class="link">
-                     <svg class="mail-icon">
-                        <use href="./images/icons/sprite.svg#icon-envelope">
-                     </svg>
-                     info@devstudio.com
-                   </a>
-                 </li>
-                 <li class="item">
-                   <a href="tel:+380991111111" class="link">
-                     <svg class="phone-icon">
-                        <use href="./images/icons/sprite.svg#icon-phone">
-                     </svg>
-                     +38 096 111 11 11</a>
-                 </li>
-               </ul>
-             </div>
-           </nav>
-         </div>
-       </header>
+         <div class="container head__container">
+         <nav class="head__nav">
+         <a class="logo logo_head link" href="./index.html"><span class="logo_left">Web</span>Studio</a>
+         <ul class="menu list">
+             <li class="menu__item">
+                 <a class="menu__link link current" href="./index.html">Студия</a>
+              </li>
+             <li class="menu__item">
+                 <a class="menu__link link"  href="./portfolio.html" >Портфолио</a>
+              </li>
+             <li class="menu__item">
+                 <a class="menu__link link" href="">Контакты</a>
+              </li>
+         </ul>
+         </nav>
+         <button type="button" class="head__mob-menu-btn" data-menu-button>
+             <svg class="head__mob-menu-icon">
+                 <use href="./images/icons/sprite.svg#open-menu"></use>
+             </svg>
+         </button>
+         <ul class="menu-contact list">
+             <li class="menu-contact__item">
+                 <a class="menu-contact__link mail link" href="mailto:info@devstudio.com">
+                  <svg class="menu-contact__icon_mail">
+                     <use href="./images/icons/sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a></li>
+             <li class="menu-contact__item">
+                 <a class="menu-contact__link tel link" href="tel:+380961111111">
+                  <svg class="menu-contact__icon_tel">
+                     <use href="./images/icons/sprite.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a></li>
+         </ul>
+      </div>
+      <div class="mob-menu" data-menu>
+          <div class="mob-menu__container container">
+              <button class="mob-menu__close-btn" data-menu-close>
+                  <svg class="mob-menu__close-btn-icon" width="19" height="19">
+                      <use href="./images/icons/sprite.svg#close-menu"></use>
+                  </svg>
+              </button>
+              <div class="mob-menu__list-container">
+                  <div class="mob-menu__nav-container">
+                      <ul class="mob-menu__nav list">
+                          <li class="mob-menu__item"><a href="./index.html" class="mob-menu__link link current">Студия</a></li>
+                          <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link link">Портфолио</a></li>
+                          <li class="mob-menu__item"><a href="" class="mob-menu__link link">Контакты</a></li>
+                      </ul>
+                  </div>
+                  <div class="mob-menu__contact-container">
+                      <ul class="mob-menu__contact list">
+                          <li class="mob-menu__contact-item"><a href="tel:+380961111111" class="mob-menu__contact-link tel-link link">
+                                  +38 096 111 11 11</a></li>
+                          <li class="mob-menu__contact-item"><a href="mailto:info@devstudio.com"
+                                  class="mob-menu__contact-link mail-link link">
+                                  info@devstudio.com</a></li>
+                      </ul>
+                      <ul class="mob-menu__social list">
+                          <li class="mob-menu__social-item"><a href="" class="mob-menu__social-link link">Instagram</a></li>
+                          <li class="mob-menu__social-item"><a href="" class="mob-menu__social-link link">Twitter</a></li>
+                          <li class="mob-menu__social-item"><a href="" class="mob-menu__social-link link">Facebook</a></li>
+                          <li class="mob-menu__social-item"><a href="" class="mob-menu__social-link link">LinkedIn</a></li>
+                      </ul>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+     </header> 
 
       <main>
          <!-- Hero -->
@@ -448,9 +476,8 @@
       <footer class="footer">
          <div class="container footer__box">
             <div class="footer-contacts">
-               <a href="" class="logo logo-footer">
-                  Web <span class="item">Studio</span>
-                </a>
+               <div class="logo-container"><a class="footer-logo-link link" href="./index.html"><span class="logo_left">Web</span>Studio</a>
+               </div>
 
             <!-- Address Section -->
             <address class="address">
