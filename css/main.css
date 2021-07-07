@@ -1220,9 +1220,14 @@ a.active {
 }
 
 .subscribe__form {
-  display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe__form {
+    display: flex;
+  }
 }
 
 .subscribe__field {
