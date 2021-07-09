@@ -8,6 +8,12 @@
   
     &__item {
       background-color: #fff;
+      
+      &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+          margin-bottom: 30px;
+        }
+      }
   
       @media screen and (min-width: 768px) {
         width: calc((100% - 2 * 30px) / 2);
@@ -18,11 +24,7 @@
         width: calc((100% - 3 * 30px) / 3);
       }
   
-      &:not(:last-child) {
-        @media screen and (max-width: 767px) {
-          margin-bottom: 30px;
-        }
-      }
+      
     }
  } 
  .pattern__link {

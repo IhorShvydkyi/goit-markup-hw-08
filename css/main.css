@@ -303,26 +303,25 @@ body {
 }
 
 .container {
-  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -367,6 +366,17 @@ a.active {
 .link {
   text-decoration: none;
   color: #212121;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .logo {
@@ -656,7 +666,7 @@ a.active {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../imagesdesktop-hero.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/desktop-hero.jpg");
   }
 }
 
@@ -779,6 +789,7 @@ a.active {
 @media screen and (max-width: 767px) {
   .modal {
     max-width: 450px;
+    width: 100vw;
   }
 }
 
@@ -829,7 +840,6 @@ a.active {
 
 @media screen and (max-width: 767px) {
   .checkbox__submit__button {
-    margin-top: 15px;
     margin-left: 100px;
   }
 }
@@ -915,12 +925,18 @@ a.active {
 }
 
 .checkbox__label {
-  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.714;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 768px) {
+  .checkbox__label {
+    display: flex;
+    font-size: 14px;
+  }
 }
 
 .checkbox__order {
@@ -954,27 +970,6 @@ a.active {
   display: none;
 }
 
-.features h3 {
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-size: inherit;
-  font-weight: 700;
-  line-height: inherit;
-  text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .features h3 {
-    text-align: left;
-  }
-}
-
-.features p {
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-  color: var(--second-text-color);
-}
-
 @media screen and (min-width: 768px) {
   .features {
     display: flex;
@@ -986,19 +981,37 @@ a.active {
 @media screen and (min-width: 1200px) {
   .features {
     display: flex;
-    flex-wrap: wrap;
     margin-left: -30px;
   }
 }
 
+.features__title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
+}
+
+.features__text {
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+
 .features__item {
-  width: 100%;
   margin-bottom: 30px;
 }
 
 .features__item:last-child {
   margin-bottom: 0;
-  margin-right: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1052,7 +1065,6 @@ a.active {
 
 .business__item {
   margin-right: var(--basic-card-gap);
-  margin-top: 0;
 }
 
 .business__item__card {
@@ -1081,6 +1093,23 @@ a.active {
   flex-direction: column;
 }
 
+.team-members__name {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.187;
+  letter-spacing: inherit;
+}
+
+.team-members__profession {
+  font-size: 16px;
+  letter-spacing: inherit;
+  text-align: center;
+  line-height: 1.187;
+  margin-top: 10px;
+  color: var(--second-text-color);
+}
+
 .team-members__list {
   margin-top: 30px;
 }
@@ -1101,25 +1130,7 @@ a.active {
   }
 }
 
-.team-members__list h3 {
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  line-height: 1.187;
-  letter-spacing: inherit;
-}
-
-.team-members__list p {
-  font-size: 16px;
-  letter-spacing: inherit;
-  text-align: center;
-  line-height: 1.187;
-  margin-top: 10px;
-  color: var(--second-text-color);
-}
-
 .team-members__item {
-  width: 100%;
   margin-bottom: 30px;
   background-color: var(--main-color);
   border-radius: 0px 0px 3px 3px;
@@ -1127,13 +1138,16 @@ a.active {
 }
 
 .team-members__item:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
   .team-members__item {
     flex-basis: calc((100% - 60px) / 2);
     margin-left: 30px;
+  }
+  .team-members__item:last-child {
+    margin-bottom: 30px;
   }
 }
 
@@ -1183,27 +1197,21 @@ a.active {
 }
 
 .clients__item {
-  width: 100%;
   margin-bottom: 30px;
   margin-left: 30px;
   flex-basis: calc((100% - 60px) / 2);
 }
 
-.clients__item:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
 @media screen and (min-width: 768px) {
   .clients__item {
     flex-basis: calc((100% - 90px) / 3);
-    margin-left: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .clients__item {
     flex-basis: calc((100% - 6 * var(--basic-card-gap)) / 6);
+    margin-bottom: 0;
   }
 }
 
@@ -1518,63 +1526,38 @@ a.active {
 .filter {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
-.filter:last-child {
-  margin-right: 0;
-}
-
-.filter .filter-link-blue {
-  background-color: var(--special-color);
-  color: var(--main-color);
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+  }
 }
 
 .filter__item {
   margin-right: 8px;
 }
 
-.filter__item:last-child {
-  margin-right: 0;
-}
-
-@media screen and (max-width: 767px) {
-  .filter__item {
-    padding-bottom: 15px;
-  }
-  .filter__item .item:nth-child(-n + 3) {
-    margin-bottom: 15px;
-  }
+.filter__item:nth-child(-n+3) {
+  margin-bottom: 15px;
 }
 
 @media screen and (min-width: 768px) {
-  .filter__item {
-    padding-bottom: 30px;
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .filter__item {
-    padding-bottom: 50px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .filter {
-    justify-content: center;
-    margin-bottom: 50px;
-    display: flex;
-  }
-  .filter .filter-link-blue {
-    background-color: var(--special-color);
-    color: var(--main-color);
-  }
   .filter__item {
     margin-right: 8px;
   }
   .filter__item:last-child {
     margin-right: 0;
   }
+  .filter__item:nth-child(-n+3) {
+    margin-bottom: 0;
+  }
+}
+
+.filter-link-blue {
+  background-color: var(--special-color);
+  color: var(--main-color);
 }
 
 .filter button {
@@ -1609,6 +1592,12 @@ a.active {
   background-color: #fff;
 }
 
+@media screen and (max-width: 767px) {
+  .pattern__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .pattern__item {
     width: calc((100% - 2 * 30px) / 2);
@@ -1619,12 +1608,6 @@ a.active {
 @media screen and (min-width: 1200px) {
   .pattern__item {
     width: calc((100% - 3 * 30px) / 3);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .pattern__item:not(:last-child) {
-    margin-bottom: 30px;
   }
 }
 
